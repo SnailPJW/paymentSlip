@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            * {
+              box-sizing: border-box;
+              font-family: 微軟正黑體;
+            }
+            input[type=text], select, textarea {
+              width: 100%;
+              padding: 12px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              resize: vertical;
+            }
+            
+            label {
+              padding: 6px 6px 6px 0;
+              display: inline-block;
+            }
+            
+            .container {
+              position: relative;
+              border-radius: 5px;
+              padding: 20px;
+              border: 2px dashed #555;
+              /* border-style:  */
+              float: left;
+              width: 489px;
+            }
+            .col {
+              float: left;
+              width: 33%;
+              text-align: right;
+            }
+            /* Clear floats after the columns */
+            .row:after,.row:before {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            .title{
+              text-align: center;
+              font-weight: bold;
+              font-size: 24px;
+              margin-bottom: 10px;
+            }
+            .sourceOfIncome{
+              float: left;
+            }
+            .whoHold{
+              float: right;
+              border: 1px dashed #555;
+            }
+            .slipFooter{
+              border-top: 2px dashed #555;
+              margin-top: 15px;
+              padding-top: 15px;
+            }
+            .slipFooter span{
+             margin-bottom: 5px;
+            }
+            /* .slipFooter span:after{
+              content: "";
+              border-bottom: 1px solid black;
+              display: inline-block;
+              width: 200px;
+            } */
+            .footerHint{
+              font-size: 13px;
+            }
+            .lblCkbConfirm{
+              border: 1px solid #999;
+              padding: 7px;
+              position: absolute;
+              width: 150px;
+              right: 10px;
+              bottom: 113px;
+              text-align: justify;
+            }
+            .lblCkbConfirm span{
+              font-weight: bolder;
+              font-size: 1.05rem;
+              border-bottom: 2px solid black;
+            }
+            .imgStamp{
+              position: absolute;
+              height: 150px;
+              width: 150px;
+              top: 75px;
+              left: 0px;
+              transform: translateX(-60%);
+            }
+    </style>
+</head>
+<body>
+        <div id="printableContainer">
+                <div class="container">
+                        <div class="title">台大醫院臨床試驗審查費繳費單</div>
+                        <div class="whoHold">繳款人收執</div>
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                  <label>繳費單編號：</label>
+                                </div>
+                                <label class="slipID">108REC－«編號-0123456789»</label>
+                              </div>
+                              <div class="row">
+                                <div class="col">
+                                  <label>日期：</label>
+                                </div>
+                                <label class="slipDate">108年7月3日</label>
+                              </div>
+                              <div class="row">
+                                <div class="col">
+                                  <label>申請案編號：</label>
+                                </div>
+                                <label class="slipCaseID">«案號-0123456789»</label>
+                              </div>
+                              <div class="row">
+                                <div class="col">
+                                  <label>繳款人/收據抬頭：</label>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col">
+                                  <label>金額：</label>
+                                </div>
+                                <label class="slipAmount">200</label>
+                              </div>
+                        <div class="row">
+                          <div class="col">
+                            <label for="slipAmountNTD"></label>
+                          </div>
+                          <div class="col">
+                            <select id="slipAmountNTD" name="slipAmountNTD">
+                              <option value="200">新台幣貳佰圓整</option>
+                              <option value="5000">新台幣伍仟圓整</option>
+                              <option value="10000">新台幣壹萬圓整</option>
+                              <option value="20000">新台幣貳萬圓整</option>
+                              <option value="60000">新台幣陸萬元整</option>
+                              <option value="Other">其他</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div>
+                          <label class="lblCkbConfirm">
+                              <input type="checkbox">
+                              已確認，本案為<span>研究者自行發起</span>計畫。
+                          </label>
+                        </div>
+                        </form>
+                        <div class="slipFooter">
+                          ※支票抬頭請開：「台大醫院作業基金401專戶」<br>
+                          ※繳費地點：東址大廳左側出納組(統一收據櫃檯)<br>
+                          <div class="footerHint">
+                            (請將出納組繳費收據+本收執聯併同影印或掃描於A4紙張上，送至本會備存)
+                          </div>
+                        </div>
+                      </div>
+                <div class="container">
+                    <div class="title">台大醫院臨床試驗審查費繳費單</div>
+                    <div class="sourceOfIncome">收入來源：RK06--RK097007</div>
+                    <div class="whoHold">出納組收執</div>
+                    <div class="row">
+                    <div class="col">
+                        <label>繳費單編號：</label>
+                    </div>
+                    <label class="slipID">108REC－«編號-0123456789»</label>
+                    </div>
+                    <div class="row">
+                    <div class="col">
+                        <label>日期：</label>
+                    </div>
+                    <label class="slipDate">108年7月3日</label>
+                    </div>
+                    <div class="row">
+                    <div class="col">
+                        <label>申請案編號：</label>
+                    </div>
+                    <label class="slipCaseID">«案號-0123456789»</label>
+                    </div>
+                    <div class="row">
+                    <div class="col">
+                        <label>繳款人/收據抬頭：</label>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col">
+                        <label>金額：</label>
+                    </div>
+                    <label class="slipAmount">200</label>
+                    </div>
+                    <div class="row">
+                    <div class="col">
+                        <label for="slipAmountNTD"></label>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="slipAmount" name="slipAmount" value="新台幣貳佰圓整" disabled>
+                    </div>
+                    </div>
+                    <label class="lblCkbConfirm">
+                        <input type="checkbox">
+                        已確認，本案為<span>研究者自行發起</span>計畫。
+                    </label>
+                    <div class="slipFooter">
+                        <span>※繳費人姓名：</span><br>
+                        <span>※電話：</span>
+                    <div class="footerHint">
+                        (僅供本次繳費相關問題聯絡使用)
+                    </div>
+                    </div>
+                    <img class="imgStamp" src="images/ptmsStamp.png" alt="Stamp">
+                </div>
+        </div>
+        <!-- <button type="button" onclick="javascript:window.print()">列印PDF</button> -->
+</body>
+</html>
